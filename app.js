@@ -45,4 +45,4 @@ app.post('/api/email', (req, res, next) => {
     })
 })
 
-app.listen(process.env.PORT, '0.0.0.0')
+app.listen(process.env.PORT)
