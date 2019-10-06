@@ -27,7 +27,7 @@ app.post('/api/email', (req, res, next) => {
   const msg = {
     to: 'jmart790@fiu.edu',
     from: req.body.email,
-    subject: 'Portfolio Contact',
+    subject: `Portfolio Contact ${req.body.name}`,
     text: req.body.message
   }
   sendGrid
@@ -45,7 +45,6 @@ app.post('/api/email', (req, res, next) => {
     })
 })
 
-// app.listen(process.env.PORT)
 app.listen(process.env.PORT || 3000, function() {
   console.log(
     'Express server listening on port %d in %s mode',
