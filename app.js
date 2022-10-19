@@ -25,7 +25,7 @@ app.get('/api', (req, res, next) => {
 app.post('/api/email', (req, res, next) => {
   sendGrid.setApiKey(process.env.SENDGRID_API_KEY)
   const msg = {
-    to: 'jmart790@fiu.edu',
+    to: 'joshualeemartinez@gmail.com',
     from: req.body.email,
     subject: `Portfolio Contact ${req.body.name}`,
     text: req.body.message
